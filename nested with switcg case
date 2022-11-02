@@ -1,0 +1,70 @@
+ //
+#include<stdio.h>
+main()
+{
+	int a,b,ch;
+	char ch1;
+	float c;
+	printf("enter the value of a");
+	scanf("%d",&a);
+	fflush(stdin);
+	
+	printf("enter the value of b");
+	scanf("%d",&b);
+	fflush(stdin);
+	
+	printf("\n1 Addition");
+	printf("\n2 Subtraction");
+	printf("\n3 Multipication");
+	printf("\n4 division");
+	
+	printf("\nenter your choice:");
+	scanf("%d",&ch);
+	fflush(stdin);
+	
+	switch (ch)
+	{ 
+	  case 1:
+	  c=a+b;
+	  break;
+	  
+	  case 2:
+	  c=a-b;
+	  break;
+	  
+	  case 3:
+	  c=a*b;
+	  break;
+	  
+	  case 4:
+	   printf("\n Quotient");
+	   printf("\n Remainder");
+	   
+	   printf("\nenter your choice");
+	   scanf("%c",&ch1);
+	   fflush(stdin);
+	   
+	   switch(ch1)
+	   {
+	   	  case'Q':
+	   	  case'q':
+	   	  	c=(float)a/b;
+	   	  	break;
+	   	  
+	   	  case'R':
+	   	  case'r':
+	   	  	c=a%b;
+	   	  	break;
+	   	  
+	   	  default:
+	   		  c=0;
+	   	  	printf("invalid");
+	   	  	break;
+		 }
+		  default:
+		  	c=0;
+		  	printf("invalid");
+		  	break;
+		}
+		printf("ans=%f",c);
+}
